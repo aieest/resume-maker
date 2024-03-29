@@ -27,8 +27,8 @@ function EditorForm({ handleChange }) {
     return (
     <section className="editor-form">
         <input type="text" name="familyName" className="last form-name" onChange={handleChange} />
-        <input type="text" name="middleName" className="middle form-name" onChange={handleChange} />
         <input type="text" name="givenName" className="given form-name" onChange={handleChange} />
+        <input type="text" name="middleName" className="middle form-name" onChange={handleChange} />
     </section>
     )
 }
