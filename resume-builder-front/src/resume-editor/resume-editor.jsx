@@ -23,7 +23,7 @@ function ResumeEditor() {
     );
 }
 
-function EditorForm() {
+function EditorForm({ handleChange }) {
     <section className="editor-form">
         <input type="text" name="familyName" className="last form-name" onChange={handleChange} />
         <input type="text" name="middleName" className="middle form-name" onChange={handleChange} />
