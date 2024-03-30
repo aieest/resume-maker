@@ -36,7 +36,11 @@ function EditorForm({ handleChange }) {
 function ResumePreview({ familyName, middleName, givenName }) {
     return (
         <section className="resume-preview">
-            <p className="preview-name">{familyName}, {givenName} {middleName}</p>
+            <div className="preview name">
+                <p>{familyName}, </p>
+                <p>{givenName} </p>
+                <p>{middleName}</p>
+            </div>
         </section>
     );
 }
