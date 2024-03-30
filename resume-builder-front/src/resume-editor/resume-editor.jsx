@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 function ResumeEditor() {
-    const [familyName, setFamilyName] = useState("familyName");
-    const [middleName, setMiddleName] = useState("middleName");
-    const [givenName, setGivenName] = useState("givenName");
-    const [suffixName, setSuffixName] = useState("suffixName");
+    const [familyName, setFamilyName] = useState("");
+    const [middleName, setMiddleName] = useState("");
+    const [givenName, setGivenName] = useState("");
+    const [suffixName, setSuffixName] = useState("");
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -29,7 +29,7 @@ function ResumeEditor() {
 function EditorForm({ handleChange }) {
     return (
     <section className="editor-form">
-        <input type="text" name="familyName" className="family form-name" onChange={handleChange} placeholder="Last Name"/>
+        <input type="text" name="familyName" className="family form-name" onChange={handleChange} placeholder="Family Name"/>
         <input type="text" name="givenName" className="given form-name" onChange={handleChange} placeholder="Given Name"/>
         <input type="text" name="middleName" className="middle form-name" onChange={handleChange} placeholder="Middle Name"/>
         <input type="text" name="suffixName" className="suffix form-name" onChange={handleChange} placeholder="Suffix"/>
@@ -41,10 +41,10 @@ function ResumePreview({ familyName, middleName, givenName, suffixName }) {
     return (
         <section className="resume-preview">
             <div className="preview name">
-                <p>{familyName}, </p>
-                <p>{givenName} </p>
-                <p>{suffixName} </p>
-                <p>{middleName}</p>
+                <p>{familyName?.length > 0? familyName : "Family Name"}</p>
+                <p>{givenName?.length > 0 ? givenName : "Given Name"}</p>
+                {middleName && <p>{middleName}</p>}
+                {suffixName && <p>{suffixName}</p>}
             </div>
         </section>
     );
