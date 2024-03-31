@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Name from "./resume-editor-form/name"
+import NamePreview from "./resume-editor-preview/name-preview"
 
 function ResumeEditor() {
     const [familyName, setFamilyName] = useState("");
@@ -45,12 +46,7 @@ function EditorForm({ handleChange }) {
 function ResumePreview({ familyName, middleName, givenName, suffixName }) {
     return (
         <section className="resume-preview">
-            <div className="preview name">
-                <p>{familyName?.length > 0? familyName : "Family Name"}</p>
-                <p>{givenName?.length > 0 ? givenName : "Given Name"}</p>
-                {middleName && <p>{middleName}</p>}
-                {suffixName && <p>{suffixName}</p>}
-            </div>
+            <NamePreview familyName={familyName} middleName={middleName} givenName={givenName} suffixName={suffixName} />
         </section>
     );
 }
