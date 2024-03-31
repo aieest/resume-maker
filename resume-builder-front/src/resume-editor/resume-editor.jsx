@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Name from "./resume-editor-form/name"
 
 function ResumeEditor() {
     const [familyName, setFamilyName] = useState("");
@@ -6,18 +7,25 @@ function ResumeEditor() {
     const [givenName, setGivenName] = useState("");
     const [suffixName, setSuffixName] = useState("");
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        if (name === "familyName") {
-            setFamilyName(value);
-        } else if (name === "middleName") {
-            setMiddleName(value);
-        } else if (name === "givenName") {
-            setGivenName(value);
-        } else if (name === "suffixName") {
-            setSuffixName(value);
+    const handleChange = (name, value) => {
+        switch (name) {
+            case "familyName":
+                setFamilyName(value);
+                break;
+            case "middleName":
+                setMiddleName(value);
+                break;
+            case "givenName":
+                setGivenName(value);
+                break;
+            case "suffixName":
+                setSuffixName(value);
+                break;
+            default:
+                break;
         }
     };
+
     return (
         <main className="resumer-editor">
             <EditorForm handleChange={handleChange} />
@@ -29,10 +37,7 @@ function ResumeEditor() {
 function EditorForm({ handleChange }) {
     return (
     <section className="editor-form">
-        <input type="text" name="familyName" className="family form-name" onChange={handleChange} placeholder="Family Name"/>
-        <input type="text" name="givenName" className="given form-name" onChange={handleChange} placeholder="Given Name"/>
-        <input type="text" name="middleName" className="middle form-name" onChange={handleChange} placeholder="Middle Name"/>
-        <input type="text" name="suffixName" className="suffix form-name" onChange={handleChange} placeholder="Suffix"/>
+        <Name handleChange={handleChange} />
     </section>
     )
 }
