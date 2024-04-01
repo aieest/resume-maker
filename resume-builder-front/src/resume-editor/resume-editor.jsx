@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Name from "./resume-editor-form/name"
 import NamePreview from "./resume-editor-preview/name-preview"
+import Address from "./resume-editor-form/address";
 
 function ResumeEditor() {
     const [familyName, setFamilyName] = useState("");
@@ -39,6 +40,7 @@ function EditorForm({ handleChange }) {
     return (
     <section className="editor-form">
         <Name handleChange={handleChange} />
+        <Address handleChange={handleChange} />
     </section>
     )
 }
