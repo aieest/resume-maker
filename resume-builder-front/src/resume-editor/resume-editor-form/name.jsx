@@ -1,9 +1,9 @@
 import React from "react";
 
-function NameForm({ handleChange }) {
+function NameForm({ handleNameChange }) {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        handleChange(name, value);
+        handleNameChange(name, value);
     };
 
     return (
