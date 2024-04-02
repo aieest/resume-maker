@@ -1,9 +1,9 @@
 import React from "react";
 
-function ContactForm({ handleContactsChange }) {
+function ContactForm({ handleContactChange }) {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        handleContactsChange(name, value);
+        handleContactChange(name, value);
     };
 
     return (

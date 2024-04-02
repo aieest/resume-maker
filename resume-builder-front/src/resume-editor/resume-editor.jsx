@@ -1,10 +1,10 @@
 import React from 'react';
 import NameForm from './resume-editor-form/name';
 import AddressForm from './resume-editor-form/address';
-import ContactForm from './resume-editor-form/contacts';
+import ContactForm from './resume-editor-form/contact';
 import NamePreview from './resume-editor-preview/name-preview';
 import AddressPreview from './resume-editor-preview/address-preview';
-import ContactPreview from './resume-editor-preview/contacts-preview';
+import ContactPreview from './resume-editor-preview/contact-preview';
 
 function ResumeEditor({ name, setName, address, setAddress, contact, setContact }) {
   const handleNameChange = (name, value) => {
