@@ -66,3 +66,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+section.resume-editor {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+section.resume-editor content {
+  margin: auto;
+  padding: 20px;
+}

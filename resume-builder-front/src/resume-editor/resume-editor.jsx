@@ -29,23 +29,18 @@ function ResumeEditor({ name, setName, address, setAddress, contact, setContact 
   };
 
   return (
-    <div className="resume-editor">
-      <div className="editor-section">
-        <h2>Name</h2>
+    <section className="resume-editor">
+      <content className="editor-form">
         <NameForm handleNameChange={handleNameChange} />
-        <NamePreview {...name} />
-      </div>
-      <div className="editor-section">
-        <h2>Address</h2>
         <AddressForm handleAddressChange={handleAddressChange} />
-        <AddressPreview {...address} />
-      </div>
-      <div className="editor-section">
-        <h2>Contacts</h2>
         <ContactForm handleContactChange={handleContactChange} />
+      </content>
+      <content className="editor-preview">
+        <NamePreview {...name} />
+        <AddressPreview {...address} />
         <ContactPreview {...contact} />
-      </div>
-    </div>
+      </content>
+    </section>
   );
 }
 
