@@ -17,6 +17,12 @@ function App() {
     stateAddress: ''
   });
 
+  const [contact, setContact] = useState({
+    phoneContact: '',
+    homeContact: '',
+    emailContact: ''
+  });
+
   return (
     <>
       <ResumeEditor 
@@ -24,6 +30,8 @@ function App() {
         setName={setName} 
         address={address} 
         setAddress={setAddress} 
+        contact={contact}
+        setContact={setContact}
       />
     </>
   );
