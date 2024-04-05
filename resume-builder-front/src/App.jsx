@@ -46,6 +46,30 @@ function App() {
     setWorkExperiences(updatedExperiences);
   };
 
+  const [educations, setEducations] = useState([{ id: 1 }]);
+
+  const handleEducationChange = (name, value, id) => {
+    const index = educations.findIndex(edu => edu.id === id);
+    const updatedEducations = [...educations];
+    updatedEducations[index][name] = value;
+    setEducations(updatedEducations);
+  };
+
+  const addEducation = () => {
+    const id = Date.now();
+    setEducations(prevEducations => [...prevEducations, { id }]);
+  };
+
+  const removeEducation = (id) => {
+    if (educations.length === 1) {
+      return;
+    }
+
+    const updatedEducations = educations.filter(edu => edu.id !== id);
+    setEducations(updatedEducations);
+  };
+
+
   return (
     <>
       <ResumeEditor 
@@ -59,6 +83,10 @@ function App() {
         handleWorkExperienceChange={handleWorkExperienceChange}
         addWorkExperience={addWorkExperience}
         removeWorkExperience={removeWorkExperience}
+        educations={educations}
+        handleEducationChange={handleEducationChange}
+        addEducation={addEducation}
+        removeEducation={removeEducation}
       />
     </>
   );
