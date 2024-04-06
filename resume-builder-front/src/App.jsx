@@ -75,6 +75,12 @@ function App() {
     setSkills(value);
   };  
 
+  const [hobbies, setHobbies] = useState([]);
+
+  const handleHobbyChange = (value) => {
+    setHobbies(value);
+  };  
+
   return (
     <>
       <ResumeEditor 
@@ -95,6 +101,9 @@ function App() {
         skills={skills}
         setSkills={setSkills}
         handleSkillChange={handleSkillChange}
+        hobbies={hobbies}
+        setHobbies={setHobbies}
+        handleHobbyChange={handleHobbyChange}
       />
     </>
   );

@@ -5,12 +5,14 @@ import ContactForm from './resume-editor-form/contact';
 import WorkExperienceForm from './resume-editor-form/work-experience';
 import EducationForm from './resume-editor-form/education';
 import SkillForm from './resume-editor-form/skills';
+import HobbyForm from './resume-editor-form/hobbies';
 import NamePreview from './resume-editor-preview/name-preview';
 import AddressPreview from './resume-editor-preview/address-preview';
 import ContactPreview from './resume-editor-preview/contact-preview';
 import WorkExperiencePreview from './resume-editor-preview/work-experience-preview';
 import EducationPreview from './resume-editor-preview/education-preview';
 import SkillPreview from './resume-editor-preview/skills-preview';
+import HobbyPreview from './resume-editor-preview/hobbies-preview';
 
 function ResumeEditor({ 
   name, setName, 
@@ -18,7 +20,8 @@ function ResumeEditor({
   contact, setContact,
   workExperiences, handleWorkExperienceChange, addWorkExperience, removeWorkExperience,
   educations, handleEducationChange, addEducation, removeEducation,
-  skills, setSkills
+  skills, setSkills,
+  hobbies, setHobbies
 }) {
   const handleNameChange = (name, value) => {
     setName(prevState => ({
@@ -45,6 +48,10 @@ function ResumeEditor({
     setSkills(value);
   };
 
+  const handleHobbyChange = (value) => {
+    setHobbies(value);
+  };
+
   return (
     <section className="resume-editor">
       <content className="editor-form">
@@ -64,6 +71,7 @@ function ResumeEditor({
           removeEducation={removeEducation} 
         />
         <SkillForm handleSkillChange={handleSkillChange} />
+        <HobbyForm handleHobbyChange={handleHobbyChange} />
       </content>
       <content className="editor-preview">
         <NamePreview {...name} />
@@ -72,6 +80,7 @@ function ResumeEditor({
         <WorkExperiencePreview workExperiences={workExperiences} />
         <EducationPreview educations={educations} />
         <SkillPreview skills={skills} />
+        <HobbyPreview hobbies={hobbies} />
       </content>
     </section>
   );
