@@ -69,6 +69,11 @@ function App() {
     setEducations(updatedEducations);
   };
 
+  const [skills, setSkills] = useState([]);
+
+  const handleSkillChange = (value) => {
+    setSkills(value);
+  };  
 
   return (
     <>
@@ -87,6 +92,9 @@ function App() {
         handleEducationChange={handleEducationChange}
         addEducation={addEducation}
         removeEducation={removeEducation}
+        skills={skills}
+        setSkills={setSkills}
+        handleSkillChange={handleSkillChange}
       />
     </>
   );

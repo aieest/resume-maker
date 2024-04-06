@@ -4,18 +4,21 @@ import AddressForm from './resume-editor-form/address';
 import ContactForm from './resume-editor-form/contact';
 import WorkExperienceForm from './resume-editor-form/work-experience';
 import EducationForm from './resume-editor-form/education';
+import SkillForm from './resume-editor-form/skills';
 import NamePreview from './resume-editor-preview/name-preview';
 import AddressPreview from './resume-editor-preview/address-preview';
 import ContactPreview from './resume-editor-preview/contact-preview';
 import WorkExperiencePreview from './resume-editor-preview/work-experience-preview';
 import EducationPreview from './resume-editor-preview/education-preview';
+import SkillPreview from './resume-editor-preview/skills-preview';
 
 function ResumeEditor({ 
   name, setName, 
   address, setAddress, 
   contact, setContact,
   workExperiences, handleWorkExperienceChange, addWorkExperience, removeWorkExperience,
-  educations, handleEducationChange, addEducation, removeEducation
+  educations, handleEducationChange, addEducation, removeEducation,
+  skills, setSkills
 }) {
   const handleNameChange = (name, value) => {
     setName(prevState => ({
@@ -38,6 +41,10 @@ function ResumeEditor({
     }));
   };
 
+  const handleSkillChange = (value) => {
+    setSkills(value);
+  };
+
   return (
     <section className="resume-editor">
       <content className="editor-form">
@@ -56,6 +63,7 @@ function ResumeEditor({
           addEducation={addEducation} 
           removeEducation={removeEducation} 
         />
+        <SkillForm handleSkillChange={handleSkillChange} />
       </content>
       <content className="editor-preview">
         <NamePreview {...name} />
@@ -63,6 +71,7 @@ function ResumeEditor({
         <ContactPreview {...contact} />
         <WorkExperiencePreview workExperiences={workExperiences} />
         <EducationPreview educations={educations} />
+        <SkillPreview skills={skills} />
       </content>
     </section>
   );
