@@ -56,7 +56,7 @@ function ResumeEditor({
 
   return (
     <section className="resume-editor">
-      <content className="editor-form">
+      <form className="editor-form">
         <NameForm handleNameChange={handleNameChange} />
         <AddressForm handleAddressChange={handleAddressChange} />
         <ContactForm handleContactChange={handleContactChange} />
@@ -74,7 +74,7 @@ function ResumeEditor({
         />
         <SkillForm handleSkillChange={handleSkillChange} />
         <HobbyForm handleHobbyChange={handleHobbyChange} />
-      </content>
+      </form>
       <content className="editor-preview">
         <NamePreview {...name} />
         <AddressPreview {...address} />
