@@ -1,4 +1,5 @@
 import React from 'react';
+// Form imports
 import NameForm from './resume-editor-form/name';
 import AddressForm from './resume-editor-form/address';
 import ContactForm from './resume-editor-form/contact';
@@ -6,6 +7,7 @@ import WorkExperienceForm from './resume-editor-form/work-experience';
 import EducationForm from './resume-editor-form/education';
 import SkillForm from './resume-editor-form/skills';
 import HobbyForm from './resume-editor-form/hobbies';
+//Preview imports
 import NamePreview from './resume-editor-preview/name-preview';
 import AddressPreview from './resume-editor-preview/address-preview';
 import ContactPreview from './resume-editor-preview/contact-preview';
