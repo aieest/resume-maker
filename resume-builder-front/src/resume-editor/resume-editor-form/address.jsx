@@ -7,7 +7,7 @@ function AddressForm({ handleAddressChange }) {
     };
 
     return (
-        <section className="editor-form">
+        <section className="address-editor-form">
             <input type="text" name="streetAddress" className="line form-address" onChange={handleInputChange} placeholder="Address Line"/>
             <input type="text" name="cityAddress" className="city form-address" onChange={handleInputChange} placeholder="City"/>
             <input type="text" name="postalCodeAddress" className="postal-code form-address" onChange={handleInputChange} placeholder="Postal Code"/>

@@ -7,7 +7,7 @@ function HobbyForm({ handleHobbyChange }) {
     };
 
     return (
-        <section className="editor-form">
+        <section className="hobbies-editor-form">
             <input type="text" name="hobbies" className="form-hobbies" onChange={handleInputChange} placeholder="Hobbies (Separate using commas)"/>
         </section>
     );

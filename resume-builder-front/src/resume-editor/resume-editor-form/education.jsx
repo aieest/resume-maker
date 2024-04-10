@@ -9,10 +9,10 @@ function EducationForm({ handleEducationChange, educations, addEducation, remove
     };
 
     return (
-        <div>
+        <div  className="education-editor-form">
             {educations.map((education, index) => (
                 <div key={education.id}>
-                    <section className="editor-form">
+                    <section>
                         <input type="text" name={`educationCourseName-${index}`} className="course-name form-education" onChange={e => handleInputChange(e, education.id)} placeholder="Course/Strand"/>
                         <input type="text" name={`educationSchoolName-${index}`} className="school-name form-education" onChange={e => handleInputChange(e, education.id)} placeholder="School Name"/>
                         <input type="text" name={`educationLevel-${index}`} className="education-level form-education" onChange={e => handleInputChange(e, education.id)} placeholder="Level"/>

@@ -9,10 +9,10 @@ function WorkExperienceForm({ handleWorkExperienceChange, workExperiences, addWo
     };
 
     return (
-        <div>
+        <div className="work-editor-form">
             {workExperiences.map((experience, index) => (
                 <div key={experience.id}>
-                    <section className="editor-form">
+                    <section>
                         <input type="text" name={`workExperienceCompany-${index}`} className="company form-experience" onChange={e => handleInputChange(e, experience.id)} placeholder="Company Name"/>
                         <input type="text" name={`workExperiencePosition-${index}`} className="position form-experience" onChange={e => handleInputChange(e, experience.id)} placeholder="Position"/>
                         <input type="date" name={`workExperienceStart-${index}`} className="start-date form-experience" onChange={e => handleInputChange(e, experience.id)} placeholder="Start Date"/>
