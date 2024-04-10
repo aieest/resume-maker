@@ -75,7 +75,7 @@ function ResumeEditor({
         <SkillForm handleSkillChange={handleSkillChange} />
         <HobbyForm handleHobbyChange={handleHobbyChange} />
       </form>
-      <content className="editor-preview">
+      <div className="editor-preview">
         <NamePreview {...name} />
         <AddressPreview {...address} />
         <ContactPreview {...contact} />
@@ -83,7 +83,7 @@ function ResumeEditor({
         <EducationPreview educations={educations} />
         <SkillPreview skills={skills} />
         <HobbyPreview hobbies={hobbies} />
-      </content>
+      </div>
     </section>
   );
 }
