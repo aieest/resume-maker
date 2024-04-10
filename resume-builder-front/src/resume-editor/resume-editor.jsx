@@ -1,4 +1,5 @@
 import React from 'react';
+import './resume-editor-styles/form.css'
 // Form imports
 import NameForm from './resume-editor-form/name';
 import AddressForm from './resume-editor-form/address';
