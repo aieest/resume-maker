@@ -91,6 +91,10 @@ button.add-work {
     margin: 1%;
 }
 
+.form-remove-btn {
+    margin: 1% 0 2% 1%;
+}
+
 /***** Education *****/
 
 .education-editor-form{

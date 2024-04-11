@@ -26,7 +26,7 @@ function WorkExperienceForm({ handleWorkExperienceChange, workExperiences, addWo
                         </div>
                         <input type="text" name={`workExperienceDescription-${index}`} className="description form-experience form-control" onChange={e => handleInputChange(e, experience.id)} placeholder="Description"/>
                     </section>
-                    {workExperiences.length > 1 && <button onClick={() => removeWorkExperience(experience.id)} className="btn btn-outline-danger">Remove</button>}
+                    {workExperiences.length > 1 && <button onClick={() => removeWorkExperience(experience.id)} className="form-remove-btn btn btn-outline-danger">Remove</button>}
                 </div>
             ))}
             <button onClick={addWorkExperience} className="add-work btn btn-outline-primary">Add Work Experience</button>
