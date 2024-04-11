@@ -27,7 +27,7 @@ function EducationForm({ handleEducationChange, educations, addEducation, remove
                         </div>
                         <input type="text" name={`educationDescription-${index}`} className="education-description form-education form-control" onChange={e => handleInputChange(e, education.id)} placeholder="Description"/>
                     </section>
-                    {educations.length > 1 && <button onClick={() => removeEducation(education.id)} btn btn-outline-danger>Remove</button>}
+                    {educations.length > 1 && <button onClick={() => removeEducation(education.id)} className="btn btn-outline-danger">Remove</button>}
                 </div>
             ))}
             <button onClick={addEducation} className="add-education btn btn-outline-primary">Add Education</button>
