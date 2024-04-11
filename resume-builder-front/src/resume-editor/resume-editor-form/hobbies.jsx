@@ -8,7 +8,7 @@ function HobbyForm({ handleHobbyChange }) {
 
     return (
         <section className="hobbies-editor-form">
-            <input type="text" name="hobbies" className="form-hobbies" onChange={handleInputChange} placeholder="Hobbies (Separate using commas)"/>
+            <input type="text" name="hobbies" className="form-hobbies form-control" onChange={handleInputChange} placeholder="Hobbies (Separate using commas)"/>
         </section>
     );
 }

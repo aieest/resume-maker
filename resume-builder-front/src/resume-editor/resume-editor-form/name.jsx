@@ -8,10 +8,10 @@ function NameForm({ handleNameChange }) {
 
     return (
         <section className="name-editor-form">
-            <input type="text" name="familyName" className="family form-name" onChange={handleInputChange} placeholder="Family Name"/>
-            <input type="text" name="givenName" className="given form-name" onChange={handleInputChange} placeholder="Given Name"/>
-            <input type="text" name="middleName" className="middle form-name" onChange={handleInputChange} placeholder="Middle Name"/>
-            <input type="text" name="suffixName" className="suffix form-name" onChange={handleInputChange} placeholder="Suffix"/>
+            <input type="text" name="familyName" className="family form-name form-control" onChange={handleInputChange} placeholder="Family Name"/>
+            <input type="text" name="givenName" className="given form-name form-control" onChange={handleInputChange} placeholder="Given Name"/>
+            <input type="text" name="middleName" className="middle form-name form-control" onChange={handleInputChange} placeholder="Middle Name"/>
+            <input type="text" name="suffixName" className="suffix form-name form-control" onChange={handleInputChange} placeholder="Suffix"/>
         </section>
     );
 }

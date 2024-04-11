@@ -1,0 +1,127 @@
+.editor-form {
+    width: 50vw;
+    padding: 50px 25px;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.editor-form::-webkit-scrollbar {
+    width: 0;
+}
+
+/***** Name *****/
+
+.name-editor-form {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-name {
+    margin: 5px;
+    width: 97%;
+}
+
+/***** Address *****/
+
+.address-editor-form {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-address {
+    margin: 5px;
+    width: 97%;
+}
+
+/***** Contacts *****/
+
+.contact-editor-form {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto; 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-contact {
+    margin: 5px;
+    width: 97%;
+}
+
+.contact-editor-form .email {
+    grid-column: span 2;
+    width: auto;
+}
+
+/***** Work Experience *****/
+
+.work-editor-form{
+    width: auto;
+}
+
+.form-experience {
+    margin: 5px;
+    width: 98.75%;
+}
+
+div.form-date {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+
+button.add-work {
+    margin: 1%;
+}
+
+/***** Education *****/
+
+.education-editor-form{
+    width: auto;
+}
+
+.form-education {
+    margin: 5px;
+    width: 98.75%;
+}
+
+button.add-education {
+    margin: 1%;
+}
+
+/***** Skills *****/
+
+.skills-editor-form {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr; 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-skills {
+    margin: 5px;
+    width: 98.7%;
+}
+
+
+/***** Hobbies *****/
+
+.hobbies-editor-form {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr; 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-hobbies {
+    margin: 5px;
+    width: 98.7%;
+}

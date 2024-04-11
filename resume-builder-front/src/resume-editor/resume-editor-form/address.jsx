@@ -8,10 +8,10 @@ function AddressForm({ handleAddressChange }) {
 
     return (
         <section className="address-editor-form">
-            <input type="text" name="streetAddress" className="line form-address" onChange={handleInputChange} placeholder="Address Line"/>
-            <input type="text" name="cityAddress" className="city form-address" onChange={handleInputChange} placeholder="City"/>
-            <input type="text" name="postalCodeAddress" className="postal-code form-address" onChange={handleInputChange} placeholder="Postal Code"/>
-            <input type="text" name="stateAddress" className="state form-address" onChange={handleInputChange} placeholder="State"/>
+            <input type="text" name="streetAddress" className="line form-address form-control" onChange={handleInputChange} placeholder="Address Line"/>
+            <input type="text" name="cityAddress" className="city form-address form-control" onChange={handleInputChange} placeholder="City"/>
+            <input type="text" name="postalCodeAddress" className="postal-code form-address form-control" onChange={handleInputChange} placeholder="Postal Code"/>
+            <input type="text" name="stateAddress" className="state form-address form-control" onChange={handleInputChange} placeholder="State"/>
         </section>
     );
 }
