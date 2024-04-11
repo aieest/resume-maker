@@ -10,6 +10,7 @@ function WorkExperienceForm({ handleWorkExperienceChange, workExperiences, addWo
 
     return (
         <div className="work-editor-form">
+            <p className="editor-subheader display-5">Work Experience</p>
             {workExperiences.map((experience, index) => (
                 <div key={experience.id}>
                     <section>

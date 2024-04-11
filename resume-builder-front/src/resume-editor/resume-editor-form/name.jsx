@@ -8,6 +8,7 @@ function NameForm({ handleNameChange }) {
 
     return (
         <section className="name-editor-form">
+            <p className="editor-subheader display-5">Name</p>
             <input type="text" name="familyName" className="family form-name form-control" onChange={handleInputChange} placeholder="Family Name"/>
             <input type="text" name="givenName" className="given form-name form-control" onChange={handleInputChange} placeholder="Given Name"/>
             <input type="text" name="middleName" className="middle form-name form-control" onChange={handleInputChange} placeholder="Middle Name"/>

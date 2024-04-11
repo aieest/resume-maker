@@ -10,6 +10,7 @@ function EducationForm({ handleEducationChange, educations, addEducation, remove
 
     return (
         <div  className="education-editor-form">
+            <p className="editor-subheader display-5">Educational Background</p>
             {educations.map((education, index) => (
                 <div key={education.id}>
                     <section>

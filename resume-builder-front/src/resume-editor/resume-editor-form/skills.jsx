@@ -8,6 +8,7 @@ function SkillForm({ handleSkillChange }) {
 
     return (
         <section className="skills-editor-form">
+            <p className="editor-subheader display-5">Skills</p>
             <input type="text" name="skills" className="form-skills form-control" onChange={handleInputChange} placeholder="Skills (Separate using commas)"/>
         </section>
     );
