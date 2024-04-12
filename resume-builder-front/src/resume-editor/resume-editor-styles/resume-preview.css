@@ -1,0 +1,118 @@
+
+.preview-subheader {
+    margin: 13px 0 0 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/***** Name *****/
+
+.preview-name {
+    padding: 5% 0;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.preview-name p {
+    margin: auto 0;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/***** Address *****/ 
+
+.preview-address {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.preview-address p {
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+/***** Contacts *****/
+
+.preview-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 10px;
+}
+
+.preview-contacts p {
+    margin: 2px 0;
+    font-size: 12px;
+    text-align: left;
+    margin: 2px 0;
+}
+
+/***** Skills *****/ 
+
+.skills-preview ul {
+    padding: 0;
+}
+
+.skills-preview ul li{
+    list-style: none;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+/***** Hobbies *****/
+
+.hobbies-preview ul {
+    padding: 0;
+}
+
+.hobbies-preview ul li{
+    list-style: none;
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+/***** Work Experience *****/ 
+
+.preview-work-experience p{
+    margin: 0;
+    font-size: 12px;
+}
+
+.preview-work-experience-position {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.preview-work-experience-dates {
+    display: flex;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/***** Education *****/
+
+.preview-education p{
+    margin: 0;
+    font-size: 12px;
+}
+
+.preview-education-course {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.preview-education-dates {
+    display: flex;
+    font-size: 12px;
+    font-style: italic;
+}

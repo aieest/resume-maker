@@ -1,14 +1,3 @@
-.editor-form {
-    width: 50vw;
-    padding: 25px 25px;
-    overflow-y: auto;
-    max-height: 100vh;
-}
-
-.editor-form::-webkit-scrollbar {
-    width: 0;
-}
-
 .editor-subheader {
     margin: 5px;
     grid-column: span 2;

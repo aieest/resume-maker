@@ -1,3 +1,9 @@
+:root {
+    --half-screen-width: 50vw;
+    --resume-document-width: 95%;
+    --resume-document-height: calc(var(--resume-document-width) * 1.414);
+}
+
 /***** Resume Editor *****/
 .resume-editor{
     width: 100vw;
@@ -6,4 +12,52 @@
     grid-template-columns: 1fr 1fr; 
     align-items: center;
     justify-content: center;
+}
+
+/***** Editor Form Section *****/
+
+
+.editor-form {
+    width: var(--half-screen-width);
+    padding: 15px 15px;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.editor-form::-webkit-scrollbar {
+    width: 0;
+}
+
+/***** Resume Editor Preview Section *****/
+
+.editor-preview {
+    padding: 10px;
+    width: var(--half-screen-width);
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.document-file {
+    margin: auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    padding: 0 35px;
+    width: var(--resume-document-width);
+    height: var(--resume-document-height);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.document-file .document-top {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.document-file .right-col {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border-left: 1px solid rgb(172, 172, 172);
+    padding-left: 20px;
 }
