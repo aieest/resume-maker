@@ -7,7 +7,7 @@ function AddressPreview({ streetAddress, cityAddress, postalCodeAddress, stateAd
         <div className="preview-address">
             {streetAddress && <p>{streetAddress}<>,&nbsp;</></p>}
             {cityAddress && <p>{cityAddress}<>,&nbsp;</></p>}
-            {postalCodeAddress && <p>{postalCodeAddress}</p>}
+            {postalCodeAddress && <p>{postalCodeAddress}<>&nbsp;</></p>}
             {stateAddress && <p>{stateAddress}</p>}
         </div>
         </>
