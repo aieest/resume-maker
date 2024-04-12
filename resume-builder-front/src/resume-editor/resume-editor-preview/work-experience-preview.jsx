@@ -9,7 +9,9 @@ function WorkExperiencePreview({ workExperiences }) {
                     <h5 className="preview-work-experience-position">{experience[`workExperiencePosition-${index}`]}</h5>
                     <p>{experience[`workExperienceCompany-${index}`]}</p>
                     <div className="preview-work-experience-dates">
-                        <p>{experience[`workExperienceStart-${index}`]}&nbsp;-&nbsp;</p>
+                        {experience[`workExperienceStart-${index}`] && experience[`workExperienceEnd-${index}`] ? (
+                            <p>{experience[`workExperienceStart-${index}`]}&nbsp;-&nbsp;</p>
+                        ) : null}
                         {experience[`workExperiencePresent-${index}`] ? <p>Present</p> : <p>{experience[`workExperienceEnd-${index}`]}</p>}
                     </div>
                     <p>{experience[`workExperienceDescription-${index}`]}</p>

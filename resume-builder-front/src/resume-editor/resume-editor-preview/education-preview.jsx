@@ -10,7 +10,9 @@ function EducationPreview({ educations }) {
                     <p>{education[`educationSchoolName-${index}`]}</p>
                     <p>{education[`educationLevel-${index}`]}</p>
                     <div className="preview-education-dates">
-                        <p>{education[`educationStart-${index}`]}&nbsp;-&nbsp;</p>
+                        {education[`educationStart-${index}`] && education[`educationEnd-${index}`] ? (
+                            <p>{education[`educationStart-${index}`]}&nbsp;-&nbsp;</p>
+                        ) : null}
                         {education[`educationPresent-${index}`] ? <p>Present</p> : <p>{education[`educationEnd-${index}`]}</p>}
                     </div>
                     <p>{education[`educationDescription-${index}`]}</p>
