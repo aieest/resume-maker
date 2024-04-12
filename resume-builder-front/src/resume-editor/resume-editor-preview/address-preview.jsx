@@ -5,8 +5,8 @@ function AddressPreview({ streetAddress, cityAddress, postalCodeAddress, stateAd
         <>
         <p className="preview-subheader">Address</p>
         <div className="preview-address">
-            {streetAddress && <p>{streetAddress}</p>}
-            {cityAddress && <p>{cityAddress}</p>}
+            {streetAddress && <p>{streetAddress}<>,&nbsp;</></p>}
+            {cityAddress && <p>{cityAddress}<>,&nbsp;</></p>}
             {postalCodeAddress && <p>{postalCodeAddress}</p>}
             {stateAddress && <p>{stateAddress}</p>}
         </div>
