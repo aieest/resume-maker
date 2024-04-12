@@ -3,12 +3,15 @@ import React from "react";
 function WorkExperiencePreview({ workExperiences }) {
     return (
         <div>
+            <p className="preview-subheader">Professional Experience</p>
             {workExperiences.map((experience, index) => (
-                <div key={experience.id} className="preview work-experience">
+                <div key={experience.id} className="preview-work-experience">
+                    <h5 className="preview-work-experience-position">{experience[`workExperiencePosition-${index}`]}</h5>
                     <p>{experience[`workExperienceCompany-${index}`]}</p>
-                    <p>{experience[`workExperiencePosition-${index}`]}</p>
-                    <p>{experience[`workExperienceStart-${index}`]}</p>
-                    {experience[`workExperiencePresent-${index}`] ? <p>Present</p> : <p>{experience[`workExperienceEnd-${index}`]}</p>}
+                    <div className="preview-work-experience-dates">
+                        <p>{experience[`workExperienceStart-${index}`]}&nbsp;-&nbsp;</p>
+                        {experience[`workExperiencePresent-${index}`] ? <p>Present</p> : <p>{experience[`workExperienceEnd-${index}`]}</p>}
+                    </div>
                     <p>{experience[`workExperienceDescription-${index}`]}</p>
                 </div>
             ))}
