@@ -1,5 +1,6 @@
 import React from 'react';
 import './resume-editor-styles/form.css'
+import './resume-editor-styles/resume-preview.css'
 // Form imports
 import NameForm from './resume-editor-form/name';
 import AddressForm from './resume-editor-form/address';
@@ -77,13 +78,21 @@ function ResumeEditor({
         <HobbyForm handleHobbyChange={handleHobbyChange} />
       </div>
       <div className="editor-preview">
-        <NamePreview {...name} />
-        <AddressPreview {...address} />
-        <ContactPreview {...contact} />
-        <WorkExperiencePreview workExperiences={workExperiences} />
-        <EducationPreview educations={educations} />
-        <SkillPreview skills={skills} />
-        <HobbyPreview hobbies={hobbies} />
+        <div className="document-file">
+          <div className="document-top">
+            <NamePreview {...name} />
+          </div>
+          <div className="left-col">
+            <AddressPreview {...address} />
+            <ContactPreview {...contact} />
+            <SkillPreview skills={skills} />
+            <HobbyPreview hobbies={hobbies} />
+          </div>
+          <div className="right-col">
+            <WorkExperiencePreview workExperiences={workExperiences} />
+            <EducationPreview educations={educations} />
+          </div>
+        </div>
       </div>
     </section>
   );
