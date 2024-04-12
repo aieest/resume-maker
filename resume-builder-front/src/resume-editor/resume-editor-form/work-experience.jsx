@@ -14,8 +14,8 @@ function WorkExperienceForm({ handleWorkExperienceChange, workExperiences, addWo
             {workExperiences.map((experience, index) => (
                 <div key={experience.id}>
                     <section>
-                        <input type="text" name={`workExperienceCompany-${index}`} className="company form-experience form-control" onChange={e => handleInputChange(e, experience.id)} placeholder="Company Name"/>
                         <input type="text" name={`workExperiencePosition-${index}`} className="position form-experience form-control" onChange={e => handleInputChange(e, experience.id)} placeholder="Position"/>
+                        <input type="text" name={`workExperienceCompany-${index}`} className="company form-experience form-control" onChange={e => handleInputChange(e, experience.id)} placeholder="Company Name"/>
                         <div className="form-date">
                             <input type="date" name={`workExperienceStart-${index}`} className="start-date form-experience form-control" onChange={e => handleInputChange(e, experience.id)} placeholder="Start Date"/>
                             <input type="date" name={`workExperienceEnd-${index}`} className="end-date form-experience form-control" onChange={e => handleInputChange(e, experience.id)} placeholder="End Date"/>
