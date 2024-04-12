@@ -42,7 +42,7 @@
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    padding: 0 35px;
+    padding: 0 35px 50px 35px;
     width: var(--resume-document-width);
     height: var(--resume-document-height);
     display: grid;
